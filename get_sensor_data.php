@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
 $username = "root"; // Ganti dengan username database Anda
-$password = "rahasia"; // Ganti dengan password database Anda
+$password = ""; // Ganti dengan password database Anda
 $dbname = "sensor_data";
 
 // Membuat koneksi
@@ -23,7 +23,7 @@ if ($result->num_rows > 0) {
         $data[] = $row;
     }
 } else {
-    echo "0 results";
+    echo json_encode($data);
 }
 
 $conn->close();
